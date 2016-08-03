@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B82FED281D5168100054BA95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED271D5168100054BA95 /* AppDelegate.swift */; };
+		B82FED2A1D5168100054BA95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED291D5168100054BA95 /* ViewController.swift */; };
+		B82FED2D1D5168100054BA95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B82FED2B1D5168100054BA95 /* Main.storyboard */; };
+		B82FED301D5168100054BA95 /* jackolantern.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B82FED2E1D5168100054BA95 /* jackolantern.xcdatamodeld */; };
+		B82FED321D5168100054BA95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82FED311D5168100054BA95 /* Assets.xcassets */; };
+		B82FED351D5168100054BA95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B82FED331D5168100054BA95 /* LaunchScreen.storyboard */; };
+		B82FED401D5168110054BA95 /* jackolanternTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED3F1D5168110054BA95 /* jackolanternTests.swift */; };
+		B82FED4B1D5168110054BA95 /* jackolanternUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED4A1D5168110054BA95 /* jackolanternUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B82FED3C1D5168110054BA95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B82FED1C1D5168100054BA95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B82FED231D5168100054BA95;
+			remoteInfo = jackolantern;
+		};
+		B82FED471D5168110054BA95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B82FED1C1D5168100054BA95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B82FED231D5168100054BA95;
+			remoteInfo = jackolantern;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B82FED241D5168100054BA95 /* jackolantern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jackolantern.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B82FED271D5168100054BA95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B82FED291D5168100054BA95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B82FED2C1D5168100054BA95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B82FED2F1D5168100054BA95 /* jackolantern.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = jackolantern.xcdatamodel; sourceTree = "<group>"; };
+		B82FED311D5168100054BA95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B82FED341D5168100054BA95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B82FED361D5168100054BA95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B82FED3B1D5168110054BA95 /* jackolanternTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jackolanternTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B82FED3F1D5168110054BA95 /* jackolanternTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jackolanternTests.swift; sourceTree = "<group>"; };
+		B82FED411D5168110054BA95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B82FED461D5168110054BA95 /* jackolanternUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jackolanternUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B82FED4A1D5168110054BA95 /* jackolanternUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jackolanternUITests.swift; sourceTree = "<group>"; };
+		B82FED4C1D5168110054BA95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B82FED211D5168100054BA95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82FED381D5168110054BA95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82FED431D5168110054BA95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B82FED1B1D5168100054BA95 = {
+			isa = PBXGroup;
+			children = (
+				B82FED261D5168100054BA95 /* jackolantern */,
+				B82FED3E1D5168110054BA95 /* jackolanternTests */,
+				B82FED491D5168110054BA95 /* jackolanternUITests */,
+				B82FED251D5168100054BA95 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B82FED251D5168100054BA95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B82FED241D5168100054BA95 /* jackolantern.app */,
+				B82FED3B1D5168110054BA95 /* jackolanternTests.xctest */,
+				B82FED461D5168110054BA95 /* jackolanternUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B82FED261D5168100054BA95 /* jackolantern */ = {
+			isa = PBXGroup;
+			children = (
+				B82FED271D5168100054BA95 /* AppDelegate.swift */,
+				B82FED291D5168100054BA95 /* ViewController.swift */,
+				B82FED2B1D5168100054BA95 /* Main.storyboard */,
+				B82FED311D5168100054BA95 /* Assets.xcassets */,
+				B82FED331D5168100054BA95 /* LaunchScreen.storyboard */,
+				B82FED361D5168100054BA95 /* Info.plist */,
+				B82FED2E1D5168100054BA95 /* jackolantern.xcdatamodeld */,
+			);
+			path = jackolantern;
+			sourceTree = "<group>";
+		};
+		B82FED3E1D5168110054BA95 /* jackolanternTests */ = {
+			isa = PBXGroup;
+			children = (
+				B82FED3F1D5168110054BA95 /* jackolanternTests.swift */,
+				B82FED411D5168110054BA95 /* Info.plist */,
+			);
+			path = jackolanternTests;
+			sourceTree = "<group>";
+		};
+		B82FED491D5168110054BA95 /* jackolanternUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B82FED4A1D5168110054BA95 /* jackolanternUITests.swift */,
+				B82FED4C1D5168110054BA95 /* Info.plist */,
+			);
+			path = jackolanternUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B82FED231D5168100054BA95 /* jackolantern */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B82FED4F1D5168110054BA95 /* Build configuration list for PBXNativeTarget "jackolantern" */;
+			buildPhases = (
+				B82FED201D5168100054BA95 /* Sources */,
+				B82FED211D5168100054BA95 /* Frameworks */,
+				B82FED221D5168100054BA95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = jackolantern;
+			productName = jackolantern;
+			productReference = B82FED241D5168100054BA95 /* jackolantern.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B82FED3A1D5168110054BA95 /* jackolanternTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B82FED521D5168110054BA95 /* Build configuration list for PBXNativeTarget "jackolanternTests" */;
+			buildPhases = (
+				B82FED371D5168110054BA95 /* Sources */,
+				B82FED381D5168110054BA95 /* Frameworks */,
+				B82FED391D5168110054BA95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B82FED3D1D5168110054BA95 /* PBXTargetDependency */,
+			);
+			name = jackolanternTests;
+			productName = jackolanternTests;
+			productReference = B82FED3B1D5168110054BA95 /* jackolanternTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B82FED451D5168110054BA95 /* jackolanternUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B82FED551D5168110054BA95 /* Build configuration list for PBXNativeTarget "jackolanternUITests" */;
+			buildPhases = (
+				B82FED421D5168110054BA95 /* Sources */,
+				B82FED431D5168110054BA95 /* Frameworks */,
+				B82FED441D5168110054BA95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B82FED481D5168110054BA95 /* PBXTargetDependency */,
+			);
+			name = jackolanternUITests;
+			productName = jackolanternUITests;
+			productReference = B82FED461D5168110054BA95 /* jackolanternUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B82FED1C1D5168100054BA95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = com.etrickery;
+				TargetAttributes = {
+					B82FED231D5168100054BA95 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 57V6N9Q448;
+					};
+					B82FED3A1D5168110054BA95 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 57V6N9Q448;
+						TestTargetID = B82FED231D5168100054BA95;
+					};
+					B82FED451D5168110054BA95 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 57V6N9Q448;
+						TestTargetID = B82FED231D5168100054BA95;
+					};
+				};
+			};
+			buildConfigurationList = B82FED1F1D5168100054BA95 /* Build configuration list for PBXProject "jackolantern" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B82FED1B1D5168100054BA95;
+			productRefGroup = B82FED251D5168100054BA95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B82FED231D5168100054BA95 /* jackolantern */,
+				B82FED3A1D5168110054BA95 /* jackolanternTests */,
+				B82FED451D5168110054BA95 /* jackolanternUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B82FED221D5168100054BA95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82FED351D5168100054BA95 /* LaunchScreen.storyboard in Resources */,
+				B82FED321D5168100054BA95 /* Assets.xcassets in Resources */,
+				B82FED2D1D5168100054BA95 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82FED391D5168110054BA95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82FED441D5168110054BA95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B82FED201D5168100054BA95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82FED2A1D5168100054BA95 /* ViewController.swift in Sources */,
+				B82FED281D5168100054BA95 /* AppDelegate.swift in Sources */,
+				B82FED301D5168100054BA95 /* jackolantern.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82FED371D5168110054BA95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82FED401D5168110054BA95 /* jackolanternTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82FED421D5168110054BA95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82FED4B1D5168110054BA95 /* jackolanternUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B82FED3D1D5168110054BA95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B82FED231D5168100054BA95 /* jackolantern */;
+			targetProxy = B82FED3C1D5168110054BA95 /* PBXContainerItemProxy */;
+		};
+		B82FED481D5168110054BA95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B82FED231D5168100054BA95 /* jackolantern */;
+			targetProxy = B82FED471D5168110054BA95 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B82FED2B1D5168100054BA95 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B82FED2C1D5168100054BA95 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B82FED331D5168100054BA95 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B82FED341D5168100054BA95 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B82FED4D1D5168110054BA95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B82FED4E1D5168110054BA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B82FED501D5168110054BA95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = jackolantern/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.etrickery.jackolantern;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B82FED511D5168110054BA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = jackolantern/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.etrickery.jackolantern;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B82FED531D5168110054BA95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = jackolanternTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.etrickery.jackolanternTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jackolantern.app/jackolantern";
+			};
+			name = Debug;
+		};
+		B82FED541D5168110054BA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = jackolanternTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.etrickery.jackolanternTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jackolantern.app/jackolantern";
+			};
+			name = Release;
+		};
+		B82FED561D5168110054BA95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = jackolanternUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.etrickery.jackolanternUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = jackolantern;
+			};
+			name = Debug;
+		};
+		B82FED571D5168110054BA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = jackolanternUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.etrickery.jackolanternUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = jackolantern;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B82FED1F1D5168100054BA95 /* Build configuration list for PBXProject "jackolantern" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B82FED4D1D5168110054BA95 /* Debug */,
+				B82FED4E1D5168110054BA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B82FED4F1D5168110054BA95 /* Build configuration list for PBXNativeTarget "jackolantern" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B82FED501D5168110054BA95 /* Debug */,
+				B82FED511D5168110054BA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B82FED521D5168110054BA95 /* Build configuration list for PBXNativeTarget "jackolanternTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B82FED531D5168110054BA95 /* Debug */,
+				B82FED541D5168110054BA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B82FED551D5168110054BA95 /* Build configuration list for PBXNativeTarget "jackolanternUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B82FED561D5168110054BA95 /* Debug */,
+				B82FED571D5168110054BA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B82FED2E1D5168100054BA95 /* jackolantern.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B82FED2F1D5168100054BA95 /* jackolantern.xcdatamodel */,
+			);
+			currentVersion = B82FED2F1D5168100054BA95 /* jackolantern.xcdatamodel */;
+			path = jackolantern.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B82FED1C1D5168100054BA95 /* Project object */;
+}
