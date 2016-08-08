@@ -453,6 +453,7 @@
 		B82FED561D5168110054BA95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: etrick@gmail.com (A2B8744MSU)";
 				INFOPLIST_FILE = jackolanternUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.etrickery.jackolanternUITests;
@@ -464,6 +465,7 @@
 		B82FED571D5168110054BA95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: etrick@gmail.com (A2B8744MSU)";
 				INFOPLIST_FILE = jackolanternUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.etrickery.jackolanternUITests;
