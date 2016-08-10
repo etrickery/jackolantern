@@ -120,13 +120,16 @@ class malfunctionViewController : ViewController, UITableViewDelegate, UITableVi
     
     
     
-    /*
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let getMilDetails = segue.destinationViewController as! milDetailsViewController
+        
+        let indexPath : NSIndexPath? = milTable.indexPathForSelectedRow
+        
+        getMilDetails.selectedMIL = milCollection[indexPath!.row]
+        
     }
-    */
-    
-    
     
     
     

@@ -1,15 +1,16 @@
 //
-//  milTableData.swift
+//  commonTableData.swift
 //  jackolantern
 //
-//  Created by Eric Pfister on 8/8/16.
+//  Created by Eric Pfister on 8/9/16.
 //  Copyright © 2016 com.etrickery. All rights reserved.
 //
+
 
 import UIKit
 
 
-class milTableData {
+class commonTableData {
     
     
     var title : String
@@ -29,5 +30,5 @@ class milTableData {
     }
     
     
-
+    
 }

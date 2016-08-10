@@ -18,6 +18,11 @@
 		B82FED591D596E840054BA95 /* malfunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED581D596E840054BA95 /* malfunctionViewController.swift */; };
 		B82FED5D1D5989BD0054BA95 /* milTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED5C1D5989BD0054BA95 /* milTableData.swift */; };
 		B82FED5F1D5ABA2A0054BA95 /* milCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED5E1D5ABA2A0054BA95 /* milCell.swift */; };
+		B82FED611D5AC2290054BA95 /* milDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED601D5AC2290054BA95 /* milDetails.swift */; };
+		B82FED651D5ACED60054BA95 /* commonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED641D5ACED60054BA95 /* commonViewController.swift */; };
+		B82FED671D5ACF3C0054BA95 /* commonTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED661D5ACF3C0054BA95 /* commonTableData.swift */; };
+		B82FED691D5ACF740054BA95 /* commonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED681D5ACF740054BA95 /* commonCell.swift */; };
+		B82FED6B1D5ACF890054BA95 /* commonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED6A1D5ACF890054BA95 /* commonDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		B82FED581D596E840054BA95 /* malfunctionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = malfunctionViewController.swift; sourceTree = "<group>"; };
 		B82FED5C1D5989BD0054BA95 /* milTableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = milTableData.swift; sourceTree = "<group>"; };
 		B82FED5E1D5ABA2A0054BA95 /* milCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = milCell.swift; sourceTree = "<group>"; };
+		B82FED601D5AC2290054BA95 /* milDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = milDetails.swift; sourceTree = "<group>"; };
+		B82FED641D5ACED60054BA95 /* commonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commonViewController.swift; sourceTree = "<group>"; };
+		B82FED661D5ACF3C0054BA95 /* commonTableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commonTableData.swift; sourceTree = "<group>"; };
+		B82FED681D5ACF740054BA95 /* commonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commonCell.swift; sourceTree = "<group>"; };
+		B82FED6A1D5ACF890054BA95 /* commonDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commonDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +122,8 @@
 				B82FED331D5168100054BA95 /* LaunchScreen.storyboard */,
 				B82FED361D5168100054BA95 /* Info.plist */,
 				B82FED2E1D5168100054BA95 /* jackolantern.xcdatamodeld */,
-				B82FED581D596E840054BA95 /* malfunctionViewController.swift */,
-				B82FED5C1D5989BD0054BA95 /* milTableData.swift */,
-				B82FED5E1D5ABA2A0054BA95 /* milCell.swift */,
+				B82FED631D5ACE4B0054BA95 /* Common Problems */,
+				B82FED621D5AC2E10054BA95 /* MIL Guide */,
 			);
 			path = jackolantern;
 			sourceTree = "<group>";
@@ -135,6 +144,28 @@
 				B82FED4C1D5168110054BA95 /* Info.plist */,
 			);
 			path = jackolanternUITests;
+			sourceTree = "<group>";
+		};
+		B82FED621D5AC2E10054BA95 /* MIL Guide */ = {
+			isa = PBXGroup;
+			children = (
+				B82FED581D596E840054BA95 /* malfunctionViewController.swift */,
+				B82FED5C1D5989BD0054BA95 /* milTableData.swift */,
+				B82FED5E1D5ABA2A0054BA95 /* milCell.swift */,
+				B82FED601D5AC2290054BA95 /* milDetails.swift */,
+			);
+			name = "MIL Guide";
+			sourceTree = "<group>";
+		};
+		B82FED631D5ACE4B0054BA95 /* Common Problems */ = {
+			isa = PBXGroup;
+			children = (
+				B82FED641D5ACED60054BA95 /* commonViewController.swift */,
+				B82FED661D5ACF3C0054BA95 /* commonTableData.swift */,
+				B82FED681D5ACF740054BA95 /* commonCell.swift */,
+				B82FED6A1D5ACF890054BA95 /* commonDetails.swift */,
+			);
+			name = "Common Problems";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,8 +305,13 @@
 				B82FED5F1D5ABA2A0054BA95 /* milCell.swift in Sources */,
 				B82FED2A1D5168100054BA95 /* ViewController.swift in Sources */,
 				B82FED5D1D5989BD0054BA95 /* milTableData.swift in Sources */,
+				B82FED671D5ACF3C0054BA95 /* commonTableData.swift in Sources */,
 				B82FED591D596E840054BA95 /* malfunctionViewController.swift in Sources */,
+				B82FED611D5AC2290054BA95 /* milDetails.swift in Sources */,
+				B82FED6B1D5ACF890054BA95 /* commonDetails.swift in Sources */,
+				B82FED651D5ACED60054BA95 /* commonViewController.swift in Sources */,
 				B82FED281D5168100054BA95 /* AppDelegate.swift in Sources */,
+				B82FED691D5ACF740054BA95 /* commonCell.swift in Sources */,
 				B82FED301D5168100054BA95 /* jackolantern.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
