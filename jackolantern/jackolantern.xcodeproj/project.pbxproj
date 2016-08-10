@@ -15,6 +15,9 @@
 		B82FED351D5168100054BA95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B82FED331D5168100054BA95 /* LaunchScreen.storyboard */; };
 		B82FED401D5168110054BA95 /* jackolanternTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED3F1D5168110054BA95 /* jackolanternTests.swift */; };
 		B82FED4B1D5168110054BA95 /* jackolanternUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED4A1D5168110054BA95 /* jackolanternUITests.swift */; };
+		B82FED591D596E840054BA95 /* malfunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED581D596E840054BA95 /* malfunctionViewController.swift */; };
+		B82FED5D1D5989BD0054BA95 /* milTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED5C1D5989BD0054BA95 /* milTableData.swift */; };
+		B82FED5F1D5ABA2A0054BA95 /* milCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED5E1D5ABA2A0054BA95 /* milCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		B82FED461D5168110054BA95 /* jackolanternUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jackolanternUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B82FED4A1D5168110054BA95 /* jackolanternUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jackolanternUITests.swift; sourceTree = "<group>"; };
 		B82FED4C1D5168110054BA95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B82FED581D596E840054BA95 /* malfunctionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = malfunctionViewController.swift; sourceTree = "<group>"; };
+		B82FED5C1D5989BD0054BA95 /* milTableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = milTableData.swift; sourceTree = "<group>"; };
+		B82FED5E1D5ABA2A0054BA95 /* milCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = milCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				B82FED331D5168100054BA95 /* LaunchScreen.storyboard */,
 				B82FED361D5168100054BA95 /* Info.plist */,
 				B82FED2E1D5168100054BA95 /* jackolantern.xcdatamodeld */,
+				B82FED581D596E840054BA95 /* malfunctionViewController.swift */,
+				B82FED5C1D5989BD0054BA95 /* milTableData.swift */,
+				B82FED5E1D5ABA2A0054BA95 /* milCell.swift */,
 			);
 			path = jackolantern;
 			sourceTree = "<group>";
@@ -262,7 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B82FED5F1D5ABA2A0054BA95 /* milCell.swift in Sources */,
 				B82FED2A1D5168100054BA95 /* ViewController.swift in Sources */,
+				B82FED5D1D5989BD0054BA95 /* milTableData.swift in Sources */,
+				B82FED591D596E840054BA95 /* malfunctionViewController.swift in Sources */,
 				B82FED281D5168100054BA95 /* AppDelegate.swift in Sources */,
 				B82FED301D5168100054BA95 /* jackolantern.xcdatamodeld in Sources */,
 			);
