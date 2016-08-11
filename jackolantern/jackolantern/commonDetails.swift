@@ -10,10 +10,37 @@ import UIKit
 
 class commonDetailsViewController: UIViewController {
 
+    @IBOutlet weak var commonImageView: UIImageView!
+    
+    
+    @IBOutlet weak var commonLabelView: UILabel!
+    
+    
+    @IBOutlet weak var commonTextView: UITextView!
+    
+    
+    
+    
+    
+    
+    var selectedCommon : commonTableData?
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if let theCommon = selectedCommon {
+            commonImageView.image = UIImage(named: theCommon.image)
+            commonLabelView.text = theCommon.title
+            commonTextView.text = theCommon.details
+            
+            
+        }
         
     }
     

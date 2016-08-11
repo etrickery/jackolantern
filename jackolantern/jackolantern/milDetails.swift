@@ -30,7 +30,12 @@ class milDetailsViewController: UIViewController {
         
             milImage.image = UIImage(named: theMIL.image)
             milTitle.text = theMIL.title
+            
+            //disable scrolling to prevent text from scrolling to bottom of text box after filling with text
+            milInformation.scrollEnabled = false
             milInformation.text = theMIL.details
+            //reenable scrolling
+            milInformation.scrollEnabled = true
             milIcon.image = UIImage(named: theMIL.icon)
     
         }

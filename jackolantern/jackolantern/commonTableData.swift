@@ -14,16 +14,14 @@ class commonTableData {
     
     
     var title : String
-    var icon : String
     var details : String
     var image : String
     
     
     
     
-    init(title : String, icon : String, details : String, image : String){
+    init(title : String, details : String, image : String){
         self.title = title
-        self.icon = icon
         self.details = details
         self.image = image
         

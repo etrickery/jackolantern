@@ -14,6 +14,7 @@ class commonCell: UITableViewCell {
     
     
     
+    @IBOutlet weak var commonLabel: UILabel!
     
     
     
