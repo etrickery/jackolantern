@@ -23,6 +23,7 @@
 		B82FED671D5ACF3C0054BA95 /* commonTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED661D5ACF3C0054BA95 /* commonTableData.swift */; };
 		B82FED691D5ACF740054BA95 /* commonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED681D5ACF740054BA95 /* commonCell.swift */; };
 		B82FED6B1D5ACF890054BA95 /* commonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED6A1D5ACF890054BA95 /* commonDetails.swift */; };
+		B82FED711D5D426E0054BA95 /* maintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED701D5D426E0054BA95 /* maintenanceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		B82FED661D5ACF3C0054BA95 /* commonTableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commonTableData.swift; sourceTree = "<group>"; };
 		B82FED681D5ACF740054BA95 /* commonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commonCell.swift; sourceTree = "<group>"; };
 		B82FED6A1D5ACF890054BA95 /* commonDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commonDetails.swift; sourceTree = "<group>"; };
+		B82FED701D5D426E0054BA95 /* maintenanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = maintenanceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +124,10 @@
 				B82FED331D5168100054BA95 /* LaunchScreen.storyboard */,
 				B82FED361D5168100054BA95 /* Info.plist */,
 				B82FED2E1D5168100054BA95 /* jackolantern.xcdatamodeld */,
-				B82FED631D5ACE4B0054BA95 /* Common Problems */,
 				B82FED621D5AC2E10054BA95 /* MIL Guide */,
+				B82FED631D5ACE4B0054BA95 /* Common Problems */,
+				B82FED6E1D5C24A20054BA95 /* Maintenance Guide */,
+				B82FED6F1D5C24C90054BA95 /* Service Directory */,
 			);
 			path = jackolantern;
 			sourceTree = "<group>";
@@ -166,6 +170,21 @@
 				B82FED6A1D5ACF890054BA95 /* commonDetails.swift */,
 			);
 			name = "Common Problems";
+			sourceTree = "<group>";
+		};
+		B82FED6E1D5C24A20054BA95 /* Maintenance Guide */ = {
+			isa = PBXGroup;
+			children = (
+				B82FED701D5D426E0054BA95 /* maintenanceViewController.swift */,
+			);
+			name = "Maintenance Guide";
+			sourceTree = "<group>";
+		};
+		B82FED6F1D5C24C90054BA95 /* Service Directory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Service Directory";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +329,7 @@
 				B82FED611D5AC2290054BA95 /* milDetails.swift in Sources */,
 				B82FED6B1D5ACF890054BA95 /* commonDetails.swift in Sources */,
 				B82FED651D5ACED60054BA95 /* commonViewController.swift in Sources */,
+				B82FED711D5D426E0054BA95 /* maintenanceViewController.swift in Sources */,
 				B82FED281D5168100054BA95 /* AppDelegate.swift in Sources */,
 				B82FED691D5ACF740054BA95 /* commonCell.swift in Sources */,
 				B82FED301D5168100054BA95 /* jackolantern.xcdatamodeld in Sources */,
@@ -541,6 +561,7 @@
 				B82FED511D5168110054BA95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B82FED521D5168110054BA95 /* Build configuration list for PBXNativeTarget "jackolanternTests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +570,7 @@
 				B82FED541D5168110054BA95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B82FED551D5168110054BA95 /* Build configuration list for PBXNativeTarget "jackolanternUITests" */ = {
 			isa = XCConfigurationList;
@@ -557,6 +579,7 @@
 				B82FED571D5168110054BA95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

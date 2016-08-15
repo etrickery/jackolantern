@@ -8,18 +8,16 @@
 
 import UIKit
 
-
+//MIL Guide custom object
 class milTableData {
     
-    
+    //variables
     var title : String
     var icon : String
     var details : String
     var image : String
     
-    
-    
-    
+    //initializer
     init(title : String, icon : String, details : String, image : String){
         self.title = title
         self.icon = icon

@@ -14,17 +14,11 @@ import UIKit
 class malfunctionViewController : ViewController, UITableViewDelegate, UITableViewDataSource{
     
     
+    //This is the table that will display all of the possible malfunction lights
     @IBOutlet weak var milTable: UITableView!
     
-    
+    //A collection of MIL details for use in the application
     var milCollection : [milTableData] = []
-    
-    
-    
-    
-    
-    
-    
     
     
     override func viewDidLoad() {
@@ -33,8 +27,6 @@ class malfunctionViewController : ViewController, UITableViewDelegate, UITableVi
         
         
         //data source for table:
-        
-        
         let mil1 : milTableData = milTableData(title: "Antilock Braking System Light", icon: "ABS.png", details: "The ABS light is indicating that the Antilock Braking System has set a malfunction code, meaning that it has detected a problem. Your ABS system helps provide traction when braking on slick surfaces such as gravel, rain, snow or ice. If the light is illuminated, the system has failed and will be disabled. The vehicle will require diagnostics using a high-level computerized scanning tool used in locally owned repair shops to large automotive dealerships. ", image: "brakes.jpg")
         milCollection.append(mil1)
         
@@ -100,33 +92,35 @@ class malfunctionViewController : ViewController, UITableViewDelegate, UITableVi
         
     }
     
-    
+    //number of rows in table
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return milCollection.count
     }
     
-    
-    
-    
+    //build cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        //gain access to cell
         let cell : milCell = milTable.dequeueReusableCellWithIdentifier("milCell")! as! milCell
         
+        //which icon is being added
         let currentIcon : milTableData = milCollection[indexPath.row] 
         
+        //place icon in imageview
         cell.milIcon!.image = UIImage(named: currentIcon.icon)
         
         return cell
     }
     
-    
-    
-    
-    
+    //ready to ship off data
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+        //reference other controller
         let getMilDetails = segue.destinationViewController as! milDetailsViewController
         
+        //reference index path to selected icon
         let indexPath : NSIndexPath? = milTable.indexPathForSelectedRow
         
+        //pass data to detail view
         getMilDetails.selectedMIL = milCollection[indexPath!.row]
         
     }
