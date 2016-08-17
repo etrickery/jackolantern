@@ -604,7 +604,7 @@ DIRECTORY</string>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="yearLabel" destination="tcb-TZ-UlF" id="8df-lt-ul6"/>
-                                            <segue destination="kZr-JN-DRs" kind="show" id="Fvo-fd-8N3"/>
+                                            <segue destination="kZr-JN-DRs" kind="show" identifier="yearToMakeSegue" id="Fvo-fd-8N3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -750,7 +750,7 @@ DIRECTORY</string>
                                 <rect key="frame" x="20" y="187" width="560" height="383"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="yearCell" rowHeight="30" id="FEg-5q-NTa" customClass="modelTableViewCell" customModule="jackolantern" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="modelCell" rowHeight="30" id="FEg-5q-NTa" customClass="modelTableViewCell" customModule="jackolantern" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="560" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FEg-5q-NTa" id="ZpU-HB-W5b">
@@ -776,8 +776,8 @@ DIRECTORY</string>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="RDV-ba-PRn" id="uUD-SE-1re"/>
-                                    <outlet property="delegate" destination="RDV-ba-PRn" id="F8q-aH-21b"/>
+                                    <outlet property="dataSource" destination="HDT-uk-XKI" id="OUB-kP-Znz"/>
+                                    <outlet property="delegate" destination="HDT-uk-XKI" id="joC-KS-na1"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the vehicle model:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knB-uA-zfV">
@@ -818,6 +818,9 @@ DIRECTORY</string>
                             <constraint firstItem="oKW-Pt-QPh" firstAttribute="leading" secondItem="g6r-7h-rM9" secondAttribute="leading" id="xEN-FJ-Myx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="modelTable" destination="xLl-dB-sv4" id="uYN-zC-ZKf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTu-QW-nxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

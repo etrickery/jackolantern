@@ -7,40 +7,36 @@
 //
 
 import UIKit
+//import SwiftyJSON
+
 
 class makeTableViewController: UIViewController {
 
     
-    var currentVehicle : [String] = [String]()
-    
-    var jsonObject : NSDictionary  = NSDictionary()
+    var currentVehicle : [String] = ["", "", "", ""]
+    var makes : [String] = [String]()
+    var models : [String] = [String]()
+
+    var jsonObject : [String : AnyObject]  = [String : AnyObject]()
     
     @IBOutlet weak var makeTable: UITableView!
     
     
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(models)
 
         // Do any additional setup after loading the view.
     }
-
+    
     
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
-        if let theObject = (jsonObject["makes"]){
-            let makeCount = theObject.count
-            
-            return makeCount
-        }
         
-        return 0
+        
+        return makes.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
@@ -48,7 +44,7 @@ class makeTableViewController: UIViewController {
         
         
         
-        
+        cell.makeLabel.text = makes[indexPath.row]
         
         
         
@@ -59,6 +55,20 @@ class makeTableViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let indexPath : NSIndexPath? = makeTable.indexPathForSelectedRow
+        
+        //makes[?]
+        let modelSelect = segue.destinationViewController as! modelTableViewController
+        
+        
+        modelSelect.models = self.models
+        modelSelect.jsonObject = self.jsonObject
+        modelSelect.currentVehicle[1] = String(self.makes[indexPath!.row])
+        
+
+
+    
+    
     }
     
     

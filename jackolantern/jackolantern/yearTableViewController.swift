@@ -10,18 +10,21 @@ import UIKit
 
 class yearTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    //var parsable : [String : [String : [String : [String : Int]]]]
     
     
     var yearRange : [Int] = [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016]
+    var makes : [String] = [String]()
+    var models : [String] = [String]()
     
     
     var goAhead : Bool = false
-   
+    
     
     @IBOutlet weak var yearTableOutlet: UITableView!
     
     
-    
+    var someObject : [String : AnyObject] = [String : AnyObject]()
     
     //View Did Load
     override func viewDidLoad() {
@@ -62,24 +65,8 @@ class yearTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        if identifier == "yearToMakeSegue" {
-            
-            return goAhead
-            
-        }
-        return false
-    }
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        
-        let indexPath : NSIndexPath? = yearTableOutlet.indexPathForSelectedRow
-        
-        
-        
-        let requestURL = NSURL(string: "https://api.edmunds.com/api/vehicle/v2/makes?state=used&year=\(yearRange[indexPath!.row])&view=basic&fmt=json&api_key=a69s88jdn9qtfdyufxr9mch9")!
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let requestURL = NSURL(string: "https://api.edmunds.com/api/vehicle/v2/makes?state=used&year=\(yearRange[indexPath.row])&view=basic&fmt=json&api_key=a69s88jdn9qtfdyufxr9mch9")!
         
         //setup request
         let urlRequest = NSMutableURLRequest(URL: requestURL)
@@ -95,36 +82,29 @@ class yearTableViewController: UIViewController, UITableViewDelegate, UITableVie
             //check for success, else - error codes
             if (statusCode == 200) {
                 do{
-                    //get json object and pass it on as currentjsonobject NSDictionary
+                    //get json object and pass it on as currentjsonobject [String : AnyObject]
                     let jsonObject = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
                     
-                    var makes : [String] = [String]()
-                    
+                    self.someObject = jsonObject as! [String : AnyObject]
                     
                     
                     if let theObject = (jsonObject["makes"]){
                         let makeCount = theObject!.count
                         for q in 0...(makeCount-1){
                             if let makeOptions = theObject![q]["name"]{
-                                makes.append(makeOptions![indexPath!])
+                                self.makes.append(makeOptions! as! String)
+                                
                             }
                         }
-
                         
-
+                        
+                        
                     }
-                    
-                    
-
-                    //makes[?]
-                    
-                    let makeSelect = segue.destinationViewController as! makeTableViewController
-                    
-                    makeSelect.currentVehicle[0] = String(self.yearRange[indexPath!.row])
-                    makeSelect.jsonObject = jsonObject as! NSDictionary
-                    
                     self.goAhead = true
                     
+                    dispatch_async(dispatch_get_main_queue(),{
+                        self.performSegueWithIdentifier("yearToMakeSegue", sender: indexPath)
+                    })
                     
                 }catch let error {
                     //print error if it occurs
@@ -135,6 +115,50 @@ class yearTableViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
         task.resume()
+        
+    }
+    
+    
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "yearToMakeSegue" {
+            
+            return goAhead
+            
+        }
+        return false
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //print(someObject["makes"]![0]["models"]!![0]["name"])
+        
+        let indexPath : NSIndexPath? = yearTableOutlet.indexPathForSelectedRow
+        
+        //makes[?]
+        let makeSelect = segue.destinationViewController as! makeTableViewController
+        
+        for x in 0...(someObject["makes"]!.count-1){
+            
+            if String(someObject["makes"]![x]["name"]) == String(makes[x]){
+                for y in 0...(someObject["makes"]![x]["models"]!!.count-1){
+                    
+                    
+                    print(someObject["makes"]![x]["models"]!![y]["name"])
+                    
+                    
+                }
+            }
+        }
+        
+        
+        makeSelect.makes = self.makes
+        makeSelect.jsonObject = self.someObject
+        makeSelect.currentVehicle[0] = String(self.yearRange[indexPath!.row])
+        makeSelect.currentVehicle[1] = String(self.makes[indexPath!.row])
+        makeSelect.models = self.models
+        //print(models)
+        
         
     }
     
