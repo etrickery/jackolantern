@@ -97,9 +97,8 @@ class yearTableViewController: UIViewController, UITableViewDelegate, UITableVie
                             }
                         }
                         
-                        
-                        
                     }
+                    
                     self.goAhead = true
                     
                     dispatch_async(dispatch_get_main_queue(),{
@@ -138,24 +137,12 @@ class yearTableViewController: UIViewController, UITableViewDelegate, UITableVie
         //makes[?]
         let makeSelect = segue.destinationViewController as! makeTableViewController
         
-        for x in 0...(someObject["makes"]!.count-1){
-            
-            if String(someObject["makes"]![x]["name"]) == String(makes[x]){
-                for y in 0...(someObject["makes"]![x]["models"]!!.count-1){
-                    
-                    
-                    print(someObject["makes"]![x]["models"]!![y]["name"])
-                    
-                    
-                }
-            }
-        }
+        
         
         
         makeSelect.makes = self.makes
         makeSelect.jsonObject = self.someObject
         makeSelect.currentVehicle[0] = String(self.yearRange[indexPath!.row])
-        makeSelect.currentVehicle[1] = String(self.makes[indexPath!.row])
         makeSelect.models = self.models
         //print(models)
         

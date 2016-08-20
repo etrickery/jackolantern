@@ -12,8 +12,9 @@ class modelTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     
-    var currentVehicle : [String] = ["", "", "", ""]
+    var currentVehicle : [String] = ["", "", "", "", ""]
     var models : [String] = [String]()
+    var yearID : [String] = [String]()
     
     var jsonObject : NSDictionary  = NSDictionary()
     
@@ -28,8 +29,29 @@ class modelTableViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //let build = jsonObject["makes"]
-        //print(models)
+        // Do any additional setup after loading the view.
+        if let getMakes = jsonObject["makes"]{
+            for theMakes in 0...(getMakes.count-1){
+                if let makeName = getMakes[theMakes]["name"]{
+                    if currentVehicle[1] == makeName as! String{
+                        if let getModels = getMakes[theMakes]["models"]{
+                            for modelNumber in 0...(getModels!.count-1){
+                                if let getTheModels = getModels![modelNumber]["name"]{
+                                    self.models.append(String(getTheModels!))
+                                }
+                                if let getID = getModels![modelNumber]["years"]!![0]["id"]{
+                                    self.yearID.append(String(getID!))
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        modelTable.reloadData()
+        
+        
         
         
     }
@@ -55,14 +77,15 @@ class modelTableViewController: UIViewController, UITableViewDelegate, UITableVi
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         
-        //let indexPath : NSIndexPath? = modelTable.indexPathForSelectedRow
+        let indexPath : NSIndexPath? = modelTable.indexPathForSelectedRow
         
-        //makes[?]
-        //let modelSelect = segue.destinationViewController as! mileageViewController
-
-    
-    
-    
+        let mileageScreen = segue.destinationViewController as! mileageViewController
+        
+        self.currentVehicle[2] = String(self.models[indexPath!.row])
+        self.currentVehicle[3] = String(self.yearID[indexPath!.row])
+        
+        mileageScreen.currentVehicle = self.currentVehicle
+        
     }
     
     

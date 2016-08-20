@@ -746,6 +746,15 @@ DIRECTORY</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_background" translatesAutoresizingMaskIntoConstraints="NO" id="oKW-Pt-QPh">
+                                <rect key="frame" x="0.0" y="64" width="600" height="60"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended Maintenance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="ql0-yH-rzr">
+                                <rect key="frame" x="0.0" y="64" width="600" height="60"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="44"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="30" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xLl-dB-sv4">
                                 <rect key="frame" x="20" y="187" width="560" height="383"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -786,15 +795,6 @@ DIRECTORY</string>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended Maintenance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="ql0-yH-rzr">
-                                <rect key="frame" x="0.0" y="64" width="600" height="60"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="44"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_background" translatesAutoresizingMaskIntoConstraints="NO" id="oKW-Pt-QPh">
-                                <rect key="frame" x="0.0" y="64" width="600" height="60"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -826,10 +826,10 @@ DIRECTORY</string>
             </objects>
             <point key="canvasLocation" x="2479" y="2804"/>
         </scene>
-        <!--View Controller-->
+        <!--Mileage View Controller-->
         <scene sceneID="QuP-q8-sLG">
             <objects>
-                <viewController id="HWn-BW-QRg" sceneMemberID="viewController">
+                <viewController id="HWn-BW-QRg" customClass="mileageViewController" customModule="jackolantern" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Ib-e2-JH1"/>
                         <viewControllerLayoutGuide type="bottom" id="3R9-Ty-sk1"/>
@@ -849,8 +849,9 @@ DIRECTORY</string>
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="mileageOkButtonAction:" destination="HWn-BW-QRg" eventType="touchUpInside" id="KLO-W6-xCY"/>
                                     <action selector="yearOkButtonAction:" destination="RDV-ba-PRn" eventType="touchUpInside" id="Ydf-nH-gBq"/>
-                                    <segue destination="Ccb-Dr-Xgj" kind="show" id="PYl-96-cQU"/>
+                                    <segue destination="Ccb-Dr-Xgj" kind="show" identifier="intervalMileage" id="vmJ-UQ-u9A"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the current mileage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AT-i9-Oor">
@@ -859,10 +860,13 @@ DIRECTORY</string>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jwU-d4-765">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="100000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jwU-d4-765">
                                 <rect key="frame" x="180" y="227" width="240" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="mileageValueIsThere:" destination="HWn-BW-QRg" eventType="editingChanged" id="4aP-Fh-Pii"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended Maintenance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="mJ4-xX-GCB">
                                 <rect key="frame" x="0.0" y="64" width="600" height="60"/>
@@ -890,15 +894,19 @@ DIRECTORY</string>
                             <constraint firstItem="mJ4-xX-GCB" firstAttribute="leading" secondItem="WR2-VO-PMd" secondAttribute="leading" id="yHZ-ez-np2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mileageOkButtonOutlet" destination="m00-q0-4kr" id="YKa-kZ-eaM"/>
+                        <outlet property="mileageTextField" destination="jwU-d4-765" id="uLL-ey-UO8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2n-Gc-akP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2479" y="3502"/>
         </scene>
-        <!--View Controller-->
+        <!--Maintenance View Controller-->
         <scene sceneID="OX7-Bt-eUJ">
             <objects>
-                <viewController id="Ccb-Dr-Xgj" sceneMemberID="viewController">
+                <viewController id="Ccb-Dr-Xgj" customClass="maintenanceViewController" customModule="jackolantern" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="abH-KD-Q10"/>
                         <viewControllerLayoutGuide type="bottom" id="7TX-eE-HjW"/>
