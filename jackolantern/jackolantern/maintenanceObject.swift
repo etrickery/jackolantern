@@ -15,6 +15,7 @@ class maintenanceObject {
     var engineCode :  String = String()
     var transmissionCode : String =  String()
     var intervalMileage : Int =  Int()
+    var intervalMonth : Int = Int()
     var frequency :  Int = Int()
     var action :  String = String()
     var item :   String = String()
@@ -23,35 +24,30 @@ class maintenanceObject {
     var partUnits :  Float = Float()
     var driveType :   String = String()
     var modelYear :   String = String()
-    var partCostPerUnit :  Float = Float()
     
+    /*init(){
+        
+    }*/
     
-    
-    init(id: Int, engineCode :  String, transmissionCode : String, intervalMileage : Int, frequency :  Int, action :  String, item :   String, itemDescription :   String, laborUnits :  Float, partUnits :  Float, driveType :   String, modelYear :   String, partCostPerUnit :  Float){
-    
-    
-    
-    self.id = id
-    self.engineCode = engineCode
-    self.transmissionCode = transmissionCode
-    self.intervalMileage = intervalMileage
-    self.frequency = frequency
-    self.action = action
-    self.item = item
-    self.itemDescription = itemDescription
-    self.laborUnits = laborUnits
-    self.partUnits = partUnits
-    self.driveType = driveType
-    self.modelYear = modelYear
-    self.partCostPerUnit = partCostPerUnit
-    
+    init(id: Int, engineCode :  String, transmissionCode : String, intervalMileage : Int, intervalMonth : Int, frequency :  Int, action :  String, item :   String, itemDescription :   String, laborUnits :  Float, partUnits :  Float, driveType :   String, modelYear :   String){
+        
+        
+        
+        self.id = id
+        self.engineCode = engineCode
+        self.transmissionCode = transmissionCode
+        self.intervalMileage = intervalMileage
+        self.intervalMonth = intervalMonth
+        self.frequency = frequency
+        self.action = action
+        self.item = item
+        self.itemDescription = itemDescription
+        self.laborUnits = laborUnits
+        self.partUnits = partUnits
+        self.driveType = driveType
+        self.modelYear = modelYear
         
     }
-    
-    /*
-     init(title : String, icon : String, details : String, image : String){
-     self.title = title
-     */
     
     
 }

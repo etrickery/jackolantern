@@ -13,7 +13,7 @@ class yearTableViewController: UIViewController, UITableViewDelegate, UITableVie
     //var parsable : [String : [String : [String : [String : Int]]]]
     
     
-    var yearRange : [Int] = [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016]
+    var yearRange : [Int] = [2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999, 1998, 1997, 1996, 1995, 1994, 1993, 1992, 1991, 1990]
     var makes : [String] = [String]()
     var models : [String] = [String]()
     
@@ -144,7 +144,6 @@ class yearTableViewController: UIViewController, UITableViewDelegate, UITableVie
         makeSelect.jsonObject = self.someObject
         makeSelect.currentVehicle[0] = String(self.yearRange[indexPath!.row])
         makeSelect.models = self.models
-        //print(models)
         
         
     }

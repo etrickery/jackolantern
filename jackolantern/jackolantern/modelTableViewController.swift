@@ -83,8 +83,10 @@ class modelTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         self.currentVehicle[2] = String(self.models[indexPath!.row])
         self.currentVehicle[3] = String(self.yearID[indexPath!.row])
-        
+
         mileageScreen.currentVehicle = self.currentVehicle
+        
+
         
     }
     

@@ -72,11 +72,12 @@ class makeTableViewController: UIViewController {
         
         modelSelect.models = self.models
         modelSelect.jsonObject = self.jsonObject
+        modelSelect.currentVehicle[0] = String(self.currentVehicle[0])
         modelSelect.currentVehicle[1] = String(self.makes[indexPath!.row])
         
         
         
-        
+
         
     }
     

@@ -70,10 +70,10 @@ class mileageViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    /*func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.mileageTextField.resignFirstResponder()
         return true
-    }
+    }*/
     
     
     
