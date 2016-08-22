@@ -11,20 +11,18 @@ import UIKit
 class modelTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    
+    //var
     var currentVehicle : [String] = ["", "", "", "", ""]
     var models : [String] = [String]()
     var yearID : [String] = [String]()
     
+    //object
     var jsonObject : NSDictionary  = NSDictionary()
     
-    
+    //outlet for table
     @IBOutlet weak var modelTable: UITableView!
     
-    
-    
-    
-    
+    //view did load
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -37,6 +35,7 @@ class modelTableViewController: UIViewController, UITableViewDelegate, UITableVi
                         if let getModels = getMakes[theMakes]["models"]{
                             for modelNumber in 0...(getModels!.count-1){
                                 if let getTheModels = getModels![modelNumber]["name"]{
+                                    //widdled down to model getting
                                     self.models.append(String(getTheModels!))
                                 }
                                 if let getID = getModels![modelNumber]["years"]!![0]["id"]{
@@ -48,23 +47,17 @@ class modelTableViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             }
         }
-        
+        //load the table with data
         modelTable.reloadData()
-        
-        
-        
-        
     }
     
-    
-    
-    
+    //table setup
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return models.count
     }
     
     
-    
+    //table setup
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell : modelTableViewCell = modelTable.dequeueReusableCellWithIdentifier("modelCell") as! modelTableViewCell
         
@@ -73,21 +66,19 @@ class modelTableViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
-    
+    //ye olde segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        
+        //index
         let indexPath : NSIndexPath? = modelTable.indexPathForSelectedRow
         
+        //setup pass
         let mileageScreen = segue.destinationViewController as! mileageViewController
         
+        //pass data
         self.currentVehicle[2] = String(self.models[indexPath!.row])
         self.currentVehicle[3] = String(self.yearID[indexPath!.row])
-
         mileageScreen.currentVehicle = self.currentVehicle
-        
-
-        
     }
     
     

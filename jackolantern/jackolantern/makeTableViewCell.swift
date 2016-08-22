@@ -11,7 +11,7 @@ import UIKit
 class makeTableViewCell: UITableViewCell {
 
     
-    
+    //label
     @IBOutlet weak var makeLabel: UILabel!
     
     

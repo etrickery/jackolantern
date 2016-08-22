@@ -10,26 +10,19 @@ import UIKit
 
 class maintenanceDetails : UIViewController {
     
-    
+    //var
     var listOfMaintenance : [String] = []
 
+    //outlet
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var detailLabel: UILabel!
-    
     @IBOutlet weak var detailText: UITextView!
     
-    
-    //
+    //viewdidload
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //self.titleLabel.text = "\(listOfMaintenance[1]) : \(listOfMaintenance[0])"
-        //self.detailLabel.text = "\(listOfMaintenance[2])"
-        
-        //self.detailText.text = "\(listOfMaintenance[1]) : \(listOfMaintenance[0])"
-    
-    
+
     }
     
     
@@ -38,7 +31,5 @@ class maintenanceDetails : UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
 }

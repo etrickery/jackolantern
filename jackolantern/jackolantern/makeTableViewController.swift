@@ -12,7 +12,7 @@ import UIKit
 
 class makeTableViewController: UIViewController {
     
-    
+    //vars
     var currentVehicle : [String] = ["", "", "", "", ""]
     var makes : [String] = [String]()
     var models : [String] = [String]()
@@ -21,63 +21,41 @@ class makeTableViewController: UIViewController {
     
     @IBOutlet weak var makeTable: UITableView!
     
-    
+    //view did load
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
-        
-        
-        
-        
     }
     
-    
-    
-    
+    //table setup
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        
-        
-        
+        //makes count
         return makes.count
     }
     
+    //table setup
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell : makeTableViewCell = makeTable.dequeueReusableCellWithIdentifier("makeCell")! as! makeTableViewCell
         
-        
-        
+        //cell
         cell.makeLabel.text = makes[indexPath.row]
-        
-        
-        
-        
         
         //cell.yearLabel.text = currentYear
         return cell
     }
     
+    //segue stuff
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let indexPath : NSIndexPath? = makeTable.indexPathForSelectedRow
         
         //makes[?]
         let modelSelect = segue.destinationViewController as! modelTableViewController
         
-        
-        
-        
-        
-        
+        //stuff to send
         modelSelect.models = self.models
         modelSelect.jsonObject = self.jsonObject
         modelSelect.currentVehicle[0] = String(self.currentVehicle[0])
         modelSelect.currentVehicle[1] = String(self.makes[indexPath!.row])
-        
-        
-        
-
         
     }
     

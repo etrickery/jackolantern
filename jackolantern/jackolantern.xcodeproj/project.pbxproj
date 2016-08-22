@@ -14,7 +14,6 @@
 		B8208D0D1D62A3B3002C6C6F /* modelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8208D0C1D62A3B3002C6C6F /* modelTableViewController.swift */; };
 		B8208D0F1D62A3D3002C6C6F /* modelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8208D0E1D62A3D3002C6C6F /* modelTableViewCell.swift */; };
 		B8208D111D62A424002C6C6F /* mileageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8208D101D62A424002C6C6F /* mileageViewController.swift */; };
-		B8208D171D66965E002C6C6F /* maintenanceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8208D161D66965E002C6C6F /* maintenanceObject.swift */; };
 		B8208D211D68E721002C6C6F /* maintenanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8208D201D68E721002C6C6F /* maintenanceTableViewCell.swift */; };
 		B8208D251D68E755002C6C6F /* shopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8208D241D68E755002C6C6F /* shopTableViewCell.swift */; };
 		B8208D271D6A1583002C6C6F /* maintenanceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8208D261D6A1583002C6C6F /* maintenanceDetails.swift */; };
@@ -62,7 +61,6 @@
 		B8208D0C1D62A3B3002C6C6F /* modelTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = modelTableViewController.swift; sourceTree = "<group>"; };
 		B8208D0E1D62A3D3002C6C6F /* modelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = modelTableViewCell.swift; sourceTree = "<group>"; };
 		B8208D101D62A424002C6C6F /* mileageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mileageViewController.swift; sourceTree = "<group>"; };
-		B8208D161D66965E002C6C6F /* maintenanceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = maintenanceObject.swift; sourceTree = "<group>"; };
 		B8208D201D68E721002C6C6F /* maintenanceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = maintenanceTableViewCell.swift; sourceTree = "<group>"; };
 		B8208D241D68E755002C6C6F /* shopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shopTableViewCell.swift; sourceTree = "<group>"; };
 		B8208D261D6A1583002C6C6F /* maintenanceDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = maintenanceDetails.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 		B8208D1C1D68E66C002C6C6F /* maintenance */ = {
 			isa = PBXGroup;
 			children = (
-				B8208D161D66965E002C6C6F /* maintenanceObject.swift */,
 				B82FED701D5D426E0054BA95 /* maintenanceViewController.swift */,
 				B8208D201D68E721002C6C6F /* maintenanceTableViewCell.swift */,
 				B8208D241D68E755002C6C6F /* shopTableViewCell.swift */,
@@ -413,7 +410,6 @@
 				B82FED691D5ACF740054BA95 /* commonCell.swift in Sources */,
 				B82FED301D5168100054BA95 /* jackolantern.xcdatamodeld in Sources */,
 				B8208D111D62A424002C6C6F /* mileageViewController.swift in Sources */,
-				B8208D171D66965E002C6C6F /* maintenanceObject.swift in Sources */,
 				B8208D0B1D62A398002C6C6F /* makeTableViewController.swift in Sources */,
 				B8208D071D628C6F002C6C6F /* yearTableViewCell.swift in Sources */,
 				B8208D051D628A1F002C6C6F /* yearTableViewController.swift in Sources */,

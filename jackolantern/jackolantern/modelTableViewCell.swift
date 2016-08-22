@@ -10,7 +10,7 @@ import UIKit
 
 class modelTableViewCell: UITableViewCell {
 
-    
+    //outlet
     @IBOutlet weak var modelLabel: UILabel!
     
     
