@@ -11,10 +11,10 @@ import UIKit
 class maintenanceTableViewCell: UITableViewCell {
     
     
-    
+    //interval
     @IBOutlet weak var intervalLabel: UILabel!
     
-    
+    //i like to call it itemaction
     @IBOutlet weak var itemActionLabel: UILabel!
     
     

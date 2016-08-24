@@ -17,7 +17,7 @@ class makeTableViewController: UIViewController {
     var makes : [String] = [String]()
     var models : [String] = [String]()
     
-    var jsonObject : [String : AnyObject]  = [String : AnyObject]()
+    var jsonObject : AnyObject?  = AnyObject?()
     
     @IBOutlet weak var makeTable: UITableView!
     
@@ -26,6 +26,32 @@ class makeTableViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+/*
+        self.models.removeAll()
+        self.jsonObject.removeAllObjects()
+        self.currentVehicle.removeAll()
+  */      
+        dispatch_async(dispatch_get_main_queue(),{
+        self.performSegueWithIdentifier("makeToModelSegue", sender: indexPath)
+        })
+
+    
+    }
+
+
+
+    //makeToModelSegue
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "makeToModelSegue" {
+            return true
+        }
+        return false
+    }
+    
     
     //table setup
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -56,7 +82,7 @@ class makeTableViewController: UIViewController {
         modelSelect.jsonObject = self.jsonObject
         modelSelect.currentVehicle[0] = String(self.currentVehicle[0])
         modelSelect.currentVehicle[1] = String(self.makes[indexPath!.row])
-        
+
     }
     
     

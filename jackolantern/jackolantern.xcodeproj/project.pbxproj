@@ -34,6 +34,7 @@
 		B82FED691D5ACF740054BA95 /* commonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED681D5ACF740054BA95 /* commonCell.swift */; };
 		B82FED6B1D5ACF890054BA95 /* commonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED6A1D5ACF890054BA95 /* commonDetails.swift */; };
 		B82FED711D5D426E0054BA95 /* maintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FED701D5D426E0054BA95 /* maintenanceViewController.swift */; };
+		B8C3BE681D6AACCF00F84B47 /* maintDetailObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C3BE671D6AACCF00F84B47 /* maintDetailObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		B82FED681D5ACF740054BA95 /* commonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commonCell.swift; sourceTree = "<group>"; };
 		B82FED6A1D5ACF890054BA95 /* commonDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commonDetails.swift; sourceTree = "<group>"; };
 		B82FED701D5D426E0054BA95 /* maintenanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = maintenanceViewController.swift; sourceTree = "<group>"; };
+		B8C3BE671D6AACCF00F84B47 /* maintDetailObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = maintDetailObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				B8208D201D68E721002C6C6F /* maintenanceTableViewCell.swift */,
 				B8208D241D68E755002C6C6F /* shopTableViewCell.swift */,
 				B8208D261D6A1583002C6C6F /* maintenanceDetails.swift */,
+				B8C3BE671D6AACCF00F84B47 /* maintDetailObject.swift */,
 			);
 			name = maintenance;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				B82FED691D5ACF740054BA95 /* commonCell.swift in Sources */,
 				B82FED301D5168100054BA95 /* jackolantern.xcdatamodeld in Sources */,
 				B8208D111D62A424002C6C6F /* mileageViewController.swift in Sources */,
+				B8C3BE681D6AACCF00F84B47 /* maintDetailObject.swift in Sources */,
 				B8208D0B1D62A398002C6C6F /* makeTableViewController.swift in Sources */,
 				B8208D071D628C6F002C6C6F /* yearTableViewCell.swift in Sources */,
 				B8208D051D628A1F002C6C6F /* yearTableViewController.swift in Sources */,

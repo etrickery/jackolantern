@@ -10,12 +10,10 @@ import UIKit
 
 class shopTableViewCell: UITableViewCell {
 
+    //shopname
     @IBOutlet weak var shopName: UILabel!
     
-    
+    //shop phone number
     @IBOutlet weak var shopNumber: UILabel!
-    
-    
-    
     
 }

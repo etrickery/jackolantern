@@ -15,9 +15,10 @@ class modelTableViewController: UIViewController, UITableViewDelegate, UITableVi
     var currentVehicle : [String] = ["", "", "", "", ""]
     var models : [String] = [String]()
     var yearID : [String] = [String]()
+    var dejaVu : Bool = false
     
     //object
-    var jsonObject : NSDictionary  = NSDictionary()
+    var jsonObject : AnyObject?  = AnyObject?()
     
     //outlet for table
     @IBOutlet weak var modelTable: UITableView!
@@ -27,12 +28,15 @@ class modelTableViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        //wipe variables
+
+        
         // Do any additional setup after loading the view.
-        if let getMakes = jsonObject["makes"]{
-            for theMakes in 0...(getMakes.count-1){
-                if let makeName = getMakes[theMakes]["name"]{
+        if let getMakes = jsonObject!["makes"]{
+            for theMakes in 0...(getMakes!.count-1){
+                if let makeName = getMakes![theMakes]["name"]{
                     if currentVehicle[1] == makeName as! String{
-                        if let getModels = getMakes[theMakes]["models"]{
+                        if let getModels = getMakes![theMakes]["models"]{
                             for modelNumber in 0...(getModels!.count-1){
                                 if let getTheModels = getModels![modelNumber]["name"]{
                                     //widdled down to model getting
@@ -50,6 +54,38 @@ class modelTableViewController: UIViewController, UITableViewDelegate, UITableVi
         //load the table with data
         modelTable.reloadData()
     }
+    
+    
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        /*
+        self.currentVehicle.removeAll()
+        self.models.removeAll()
+        self.yearID.removeAll()
+        self.jsonObject.removeAllObjects()
+        */
+        dispatch_async(dispatch_get_main_queue(),{
+            
+            self.performSegueWithIdentifier("modelToMilesSegue", sender: indexPath)
+        })
+        
+        
+    }
+    
+    
+    
+    //makeToModelSegue
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "modelToMilesSegue" {
+            return true
+        }
+        return false
+    }
+    
+
+    
+    
     
     //table setup
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{

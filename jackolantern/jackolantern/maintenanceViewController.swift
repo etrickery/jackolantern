@@ -17,8 +17,9 @@ import MapKit
 class maintenanceViewController  : UIViewController, CLLocationManagerDelegate {
     
     //var someObject : [maintenanceObject] = [maintenanceObject]()
-    var listOfMaintenance : [[String]] = [[String]]()
+    var listOfMaintenance : [maintDetailObject] = [maintDetailObject]()
     var shops : [[String]] = [[String]]()
+    var goAhead : Bool = false
     
     //local getter
     let locationManager = CLLocationManager()
@@ -51,7 +52,7 @@ class maintenanceViewController  : UIViewController, CLLocationManagerDelegate {
         //get stuff
         self.selectedVehicleLabel.text = "\(self.currentVehicle[0]) \(self.currentVehicle[1]) \(self.currentVehicle[2]))"
         self.mileageLabel.text = "\(self.currentVehicle[4]) miles"
-
+        
         //url
         let requestURL = NSURL(string: "https://api.edmunds.com/v1/api/maintenance/actionrepository/findbymodelyearid?modelyearid=\(currentVehicle[3])&fmt=json&api_key=a69s88jdn9qtfdyufxr9mch9")!
         
@@ -86,19 +87,51 @@ class maintenanceViewController  : UIViewController, CLLocationManagerDelegate {
                             if theObject!.count > 0 {
                                 
                                 for q in 0...(self.itemCount-1){
-                                    let thisItem : [String] = [theObject![q]["item"] as! String, theObject![q]["action"] as! String, String(theObject![q]["intervalMileage"] as! Int), theObject![q]["itemDescription"] as! String]
-                                    self.listOfMaintenance.append(thisItem)
                                     
+                                    if ((Int(self.currentVehicle[4])!+10000) > theObject![q]["intervalMileage"] as? Int){
+                                        let thisItem : maintDetailObject = maintDetailObject()
+                                        thisItem.action = theObject![q]["item"] as? String
+                                        thisItem.item = theObject![q]["action"] as? String
+                                        thisItem.mileage = theObject![q]["intervalMileage"] as? Int
+                                        thisItem.description = theObject![q]["itemDescription"] as? String
+                                        self.listOfMaintenance.append(thisItem)
+                                    }
                                 }
                                 
                                 
                             }
+                            
+                            
+                        }else{
+                            
+                            let thisItem00 : maintDetailObject = maintDetailObject()
+                            thisItem00.action = "Change engine oil & replace filter"
+                            thisItem00.item = "Engine Oil & Filter"
+                            thisItem00.mileage = 3000
+                            thisItem00.description = "Engine oil is used to lubricate the internal components of the vehicle engine. The filter removes larger contaminates that accumulate as the engine gets hot and cools repeatedly through use. Heavier use requires the service more often. Higher mileage vehicles should also be taken care of more often to ensure they continue to operate. Driving a vehicle with dirty engine oil can damage the engine, and most vehicles will not last long without regular maintenance. Driving without changing the motor oil can cause the oil to form sludge and will cause insufficient lubrication. Changing your oil & filter is the single easiest and most important service your vehicle requires"
+                            self.listOfMaintenance.append(thisItem00)
+                            
+                            let thisItem01 : maintDetailObject = maintDetailObject()
+                            thisItem01.action = "Drain, flush and refill cooling system"
+                            thisItem01.item = "Antifreeze or Engine Coolant"
+                            thisItem01.mileage = 30000
+                            thisItem01.description = "Most vehicles require coolant replacement every 3 years. Some engine coolant can last for 5 or even 10 years. Antifreeze types should never be mixed. Each has different chemical properties that require specific mixtures. By mixing antifreeze your vehicle cooling system will cause a variety of problems. Checking for leaks every service visit will ensure your vehicle will last longer. Overheating will quickly cause catastrophic engine failure."
+                            self.listOfMaintenance.append(thisItem01)
+                            
+                            let thisItem02 : maintDetailObject = maintDetailObject()
+                            thisItem02.action = "Transmission filter and/or fluid changing"
+                            thisItem02.item = "Automatic Transmission Service"
+                            thisItem02.mileage = 60000
+                            thisItem02.description = "Replacement of the transmission filter and/or flushing the automatic transmission fluid will help extend it's life and reduce the likelyhood of premature failure. Vehicles that have not regularly been serviced can actually be harmed by servicing them at high mileage. Transmissions generate metal shavings which can clog the filter. Fluid can turn to a varnish and cause damage to thte internal components within the transmission."
+                            self.listOfMaintenance.append(thisItem02)
+                            
                         }
                     }
                     
                     //do it
                     dispatch_async(dispatch_get_main_queue(),{
                         self.maintenanceTable.reloadData()
+                        self.goAhead = true
                     })
                 }catch let error {
                     //print error if it occurs
@@ -160,6 +193,38 @@ class maintenanceViewController  : UIViewController, CLLocationManagerDelegate {
     
     
     
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if (tableView == self.maintenanceTable){
+            if goAhead {
+                dispatch_async(dispatch_get_main_queue(),{
+                    self.performSegueWithIdentifier("maintToMaintDetails", sender: indexPath)
+                })
+            }
+        }else if (tableView == self.shopTable){
+            dispatch_async(dispatch_get_main_queue(),{
+                self.performSegueWithIdentifier("maintToShopDetails", sender: indexPath)
+            })
+        }
+        
+        
+    }
+    
+    
+    
+    //makeToModelSegue
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "maintToMaintDetails" {
+            return true
+        }else if identifier == "maintToShopDetails" {
+            return true
+        }
+        return false
+    }
+    
+    
+    
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         if (tableView == self.maintenanceTable){
             //maintenancetable
@@ -180,12 +245,12 @@ class maintenanceViewController  : UIViewController, CLLocationManagerDelegate {
             //build cells
             let cell : maintenanceTableViewCell = maintenanceTable.dequeueReusableCellWithIdentifier("maintenanceCell") as! maintenanceTableViewCell
             //get data
-            if self.listOfMaintenance[indexPath.row][2] != "0"{
-                cell.intervalLabel.text = "Every \(self.listOfMaintenance[indexPath.row][2]) miles"
+            if self.listOfMaintenance[indexPath.row].mileage != 0{
+                cell.intervalLabel.text = "Every \(self.listOfMaintenance[indexPath.row].mileage) miles"
             }else{
                 cell.intervalLabel.text = "Every service visit"
             }
-            cell.itemActionLabel.text = "\(self.listOfMaintenance[indexPath.row][1]) : \(self.listOfMaintenance[indexPath.row][0])"
+            cell.itemActionLabel.text = "\(self.listOfMaintenance[indexPath.row].action!) : \(self.listOfMaintenance[indexPath.row].item!)"
             
             //return it
             return cell
@@ -202,7 +267,7 @@ class maintenanceViewController  : UIViewController, CLLocationManagerDelegate {
             return cell
             
         }else{
-            //bs response in case of thermonuclear war
+            //response in case of thermonuclear war
             let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("default")!
             return cell
         }
@@ -210,17 +275,19 @@ class maintenanceViewController  : UIViewController, CLLocationManagerDelegate {
     
     //seguenator
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue == "maintToMaintDetails"){
+        if (segue.identifier == "maintToMaintDetails"){
             //maintenancetable
             
             
             let indexPath : NSIndexPath? = maintenanceTable.indexPathForSelectedRow
             
             let maintScreen = segue.destinationViewController as! maintenanceDetails
-            print(listOfMaintenance[(indexPath?.row)!])
             maintScreen.listOfMaintenance = self.listOfMaintenance[(indexPath?.row)!]
             
-        }else{
+            maintScreen.test = "it works"
+            
+            
+        }else if (segue.identifier == "maintToShopDetails"){
             //shoptable
         }
     }

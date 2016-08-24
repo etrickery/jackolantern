@@ -11,8 +11,11 @@ import UIKit
 class maintenanceDetails : UIViewController {
     
     //var
-    var listOfMaintenance : [String] = []
-
+    var listOfMaintenance : maintDetailObject = maintDetailObject()
+    var test : String = ""
+    
+    
+    
     //outlet
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
@@ -22,7 +25,24 @@ class maintenanceDetails : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        print("test: \(test)")
+        if let theItem = listOfMaintenance.item{
+            if let theAction = listOfMaintenance.action{
+                self.titleLabel.text = "\(theItem) : \(theAction)"
+            }
+        }
+        if let theMileage = listOfMaintenance.mileage{
+            if theMileage == 0{
+                self.detailLabel.text = "Every service visit"
+            }else{
+                self.detailLabel.text = "\(String(theMileage)) mile service"
+            }
+        }
+        if let theDescription = listOfMaintenance.description{
 
+        self.detailText.text = theDescription
+        }
     }
     
     

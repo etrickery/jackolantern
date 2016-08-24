@@ -14,7 +14,7 @@ class mileageViewController: UIViewController, UITextFieldDelegate {
     var currentVehicle : [String] = ["", "", "", "", ""]
     var models : [String] = [String]()
     var yearID : [String] = [String]()
-    var jsonObject : NSDictionary  = NSDictionary()
+    var jsonObject : AnyObject?  = AnyObject?()
     
     //status
     var goAhead : Bool = false
@@ -48,6 +48,12 @@ class mileageViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        /*wipe variables
+        self.currentVehicle.removeAll()
+        self.models.removeAll()
+        self.yearID.removeAll()
+        self.jsonObject.removeAllObjects()
+        */
         //setting changes
         self.mileageOkButtonOutlet.enabled = false
         self.mileageOkButtonOutlet.backgroundColor = UIColor.darkGrayColor()
