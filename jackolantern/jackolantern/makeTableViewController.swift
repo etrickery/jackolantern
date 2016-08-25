@@ -10,7 +10,7 @@ import UIKit
 //import SwiftyJSON
 
 
-class makeTableViewController: UIViewController {
+class makeTableViewController: UIViewController, UINavigationControllerDelegate {
     
     //vars
     var currentVehicle : [String] = ["", "", "", "", ""]
@@ -25,16 +25,23 @@ class makeTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        navigationController?.delegate = self
+
+        
     }
     
+    //this is to remove the duplicating that occurs when going back and forth between various menu items
+    func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool){
+        if let yearController = viewController as? yearTableViewController {
+            yearController.makes.removeAll()
+            
+        }
+    }
     
-    
+    //table stuff
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-/*
-        self.models.removeAll()
-        self.jsonObject.removeAllObjects()
-        self.currentVehicle.removeAll()
-  */      
+        //go ahead and perform segue
         dispatch_async(dispatch_get_main_queue(),{
         self.performSegueWithIdentifier("makeToModelSegue", sender: indexPath)
         })

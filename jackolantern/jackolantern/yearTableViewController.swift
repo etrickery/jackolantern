@@ -8,7 +8,7 @@
 
 import UIKit
 
-class yearTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class yearTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate {
     
     //var parsable : [String : [String : [String : [String : Int]]]]
     
@@ -32,6 +32,8 @@ class yearTableViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        navigationController?.delegate = self
         
     }
     
@@ -92,8 +94,9 @@ class yearTableViewController: UIViewController, UITableViewDelegate, UITableVie
                     //status update
                     self.goAhead = true
                     //go make segue happen
+                    
                     dispatch_async(dispatch_get_main_queue(),{
-
+                        
                         self.performSegueWithIdentifier("yearToMakeSegue", sender: indexPath)
                     })
                     

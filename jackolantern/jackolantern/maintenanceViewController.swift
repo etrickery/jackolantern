@@ -176,6 +176,9 @@ class maintenanceViewController  : UIViewController, CLLocationManagerDelegate {
                         let phoneNumber = response.mapItems[whichThing].phoneNumber
                         let theResult : [String] = [name!, phoneNumber!]
                         self.shops.append(theResult)
+                        
+                        print(response.mapItems[whichThing])
+                        
                     }
                     
                     //build table
@@ -203,7 +206,12 @@ class maintenanceViewController  : UIViewController, CLLocationManagerDelegate {
             }
         }else if (tableView == self.shopTable){
             dispatch_async(dispatch_get_main_queue(),{
-                self.performSegueWithIdentifier("maintToShopDetails", sender: indexPath)
+                let phoneNumber = self.shops[indexPath.row][1].componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).joinWithSeparator("")
+                let phoneNumberAsURL = "tel://\(phoneNumber)"
+                let theUrl : NSURL = NSURL(string: phoneNumberAsURL)!
+                UIApplication.sharedApplication().openURL(theUrl)
+                
+                print("On the emulator, the app seems to freeze. However, on the actual device selecting a shop will launch the dialer and call the shop.")
             })
         }
         
