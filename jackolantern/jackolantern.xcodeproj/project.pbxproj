@@ -37,6 +37,7 @@
 		B8C3BE681D6AACCF00F84B47 /* maintDetailObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C3BE671D6AACCF00F84B47 /* maintDetailObject.swift */; };
 		B8C3BE6C1D6E84DE00F84B47 /* serviceDirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C3BE6B1D6E84DE00F84B47 /* serviceDirectoryViewController.swift */; };
 		B8C3BE6E1D6E84FB00F84B47 /* serviceDirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C3BE6D1D6E84FB00F84B47 /* serviceDirectoryCell.swift */; };
+		B8C3BE721D6FC1D100F84B47 /* serviceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C3BE711D6FC1D100F84B47 /* serviceObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		B8C3BE671D6AACCF00F84B47 /* maintDetailObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = maintDetailObject.swift; sourceTree = "<group>"; };
 		B8C3BE6B1D6E84DE00F84B47 /* serviceDirectoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serviceDirectoryViewController.swift; sourceTree = "<group>"; };
 		B8C3BE6D1D6E84FB00F84B47 /* serviceDirectoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serviceDirectoryCell.swift; sourceTree = "<group>"; };
+		B8C3BE711D6FC1D100F84B47 /* serviceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serviceObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 			children = (
 				B8C3BE6B1D6E84DE00F84B47 /* serviceDirectoryViewController.swift */,
 				B8C3BE6D1D6E84FB00F84B47 /* serviceDirectoryCell.swift */,
+				B8C3BE711D6FC1D100F84B47 /* serviceObject.swift */,
 			);
 			name = "Service Directory";
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				B82FED6B1D5ACF890054BA95 /* commonDetails.swift in Sources */,
 				B82FED651D5ACED60054BA95 /* commonViewController.swift in Sources */,
 				B8C3BE6C1D6E84DE00F84B47 /* serviceDirectoryViewController.swift in Sources */,
+				B8C3BE721D6FC1D100F84B47 /* serviceObject.swift in Sources */,
 				B82FED711D5D426E0054BA95 /* maintenanceViewController.swift in Sources */,
 				B82FED281D5168100054BA95 /* AppDelegate.swift in Sources */,
 				B8208D091D62A351002C6C6F /* makeTableViewCell.swift in Sources */,
